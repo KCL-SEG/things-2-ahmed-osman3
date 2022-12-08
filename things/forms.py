@@ -4,7 +4,7 @@ from django.core.validators import RegexValidator
 from .models import Thing
 
 class ThingForm(forms.ModelForm):
-    class meta:
+    class Meta:
         model = Thing
         fields = ['name','description', 'quantity','created_at']
 
