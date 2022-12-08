@@ -6,7 +6,7 @@ from .models import Thing
 class ThingForm(forms.ModelForm):
     class Meta:
         model = Thing
-        fields = ['name','description', 'quantity','created_at']
+        fields = ['name','description', 'quantity']
 
     
     def clean(self):
@@ -19,6 +19,5 @@ class ThingForm(forms.ModelForm):
             name = self.cleaned_data.get('name'),
             description = self.cleaned_data.get('descripquantity'),
             quantity = self.cleaned_data.get('quantity'),
-            created_at = self.cleaned_data.get('created_at')
         )
         return thing
